@@ -14,123 +14,136 @@
 
 <body>
 
-    <main class="site-shell">
+    <div class="container my-5">
 
-        <section class="hero">
+        <section class="hero text-center">
             <p class="eyebrow">Data Story · International Student Life</p>
-
-            <h1>Nearly <span>$280,000</span> to Stay</h1>
-
-            <p class="subtitle">The private cost of pursuing an education in Toronto</p>
+            <h1>Nearly $280,000 to Stay</h1>
+            <h2>The cost of being an international student in Toronto</h2>
 
             <p class="intro">
-                I arrived in Toronto from India carrying ambition, discipline, and the belief that education could become
-                a bridge to a larger life. Four years later, the numbers reveal a more complex truth: studying abroad is
-                not only an academic journey, but a luxury-grade financial undertaking paid through tuition, rent,
-                currency conversion, restraint, and relentless endurance.
+                I came to Toronto from India for education, independence, and possibility.
+                But over four years, the price of staying became more than tuition and rent.
+                It became a story of currency conversion, monthly survival, and the quiet pressure of building a future far from home.
             </p>
         </section>
 
-        <section class="marquee-panel">
-            <p class="panel-label">Estimated four-year cost</p>
-            <h2>$278,960 CAD</h2>
-            <p>
-                Converted into Indian rupees, this becomes <strong id="croreValue">≈ ₹1.92 crore</strong>.
+        <section class="shock-section text-center my-5">
+            <p class="shock-label">Estimated total cost over 4 years</p>
+            <h1 class="shock-number">$278,960 CAD</h1>
+            <p class="shock-subtext">
+                Converted to Indian rupees, that becomes <strong id="croreValue">≈ ₹1.92 crore</strong>.
             </p>
-            <small id="exchangeRate">1 CAD ≈ ₹68.77</small>
+            <p class="exchange-note" id="exchangeRate">1 CAD ≈ ₹68.77</p>
         </section>
 
-        <section class="summary-grid">
-            <div class="metric-card">
+        <section class="summary-grid my-5">
+            <div class="summary-card">
                 <span>Total in CAD</span>
                 <strong>$278,960</strong>
             </div>
 
-            <div class="metric-card dark">
+            <div class="summary-card inr-card">
                 <span>Total in INR</span>
                 <strong id="totalInr">₹0</strong>
                 <small>home-currency shock</small>
             </div>
 
-            <div class="metric-card">
-                <span>Annual Estimate</span>
+            <div class="summary-card">
+                <span>Annual Cost</span>
                 <strong>$69,740</strong>
             </div>
         </section>
 
-        <section class="story-card">
-            <div class="copy-block">
-                <p class="section-label">Interactive Chart 1</p>
-                <h3>Tuition is not a fee. It is the gate.</h3>
-                <p>
-                    At approximately $33,000 CAD per year, tuition commands the largest share of the annual cost.
-                    It is not a background expense; it is the threshold that determines whether I am allowed to remain
-                    enrolled, eligible, and present.
-                </p>
-                <p class="instruction">Hover over the chart to inspect each cost category.</p>
-            </div>
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 1</p>
+                    <h3>Tuition is the first financial wall.</h3>
 
-            <div class="chart-card">
-                <canvas id="expenseDonutChart"></canvas>
-            </div>
-        </section>
+                    <p>
+                        My yearly tuition and fees are estimated at $33,000 CAD.
+                        That single category takes up the largest portion of the annual cost.
+                    </p>
 
-        <section class="story-card">
-            <div class="copy-block">
-                <p class="section-label">Interactive Chart 2</p>
-                <h3>The smaller costs become aristocratic through repetition.</h3>
-                <p>
-                    Rent, groceries, transit, phone bills, personal care, and flights home may appear ordinary in
-                    isolation. But recurrence gives them power. Month after month, they assemble into a second financial
-                    architecture beneath tuition.
-                </p>
-                <p class="instruction">Hover over each bar to reveal the annual amount.</p>
-            </div>
+                    <p>
+                        For international students, tuition is not a background expense.
+                        It is the price of permission: the cost of remaining enrolled, remaining eligible, and remaining here.
+                    </p>
+                </div>
 
-            <div class="chart-card">
-                <canvas id="expenseBarChart"></canvas>
+                <div class="col-lg-7">
+                    <canvas id="expenseDonutChart"></canvas>
+                </div>
             </div>
         </section>
 
-        <section class="story-card">
-            <div class="copy-block">
-                <p class="section-label">Interactive Chart 3</p>
-                <h3>Four years transforms pressure into a fortune.</h3>
-                <p>
-                    One year is expensive. Four years becomes monumental. The cumulative line reveals how an annual cost
-                    slowly matures into a number large enough to feel less like a student budget and more like a family
-                    investment portfolio.
-                </p>
-                <p class="instruction">Hover across the timeline to see the accumulated cost by year.</p>
-            </div>
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 2</p>
+                    <h3>The smaller costs become heavy through repetition.</h3>
 
-            <div class="chart-card">
-                <canvas id="timelineChart"></canvas>
+                    <p>
+                        Rent, groceries, transit, phone bills, personal care, and flights home may look separate.
+                        But they do not arrive separately in real life. They arrive every month, every semester, every year.
+                    </p>
+
+                    <p>
+                        This chart turns those recurring costs into a ranked visual receipt of one year in Toronto.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <canvas id="expenseBarChart"></canvas>
+                </div>
             </div>
         </section>
 
-        <section class="reflection">
-            <p class="section-label">Closing Reflection</p>
+        <section class="story-card timeline-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 3</p>
+                    <h3>Four years turns pressure into a massive total.</h3>
+
+                    <p>
+                        One year is already expensive. Four years changes the scale completely.
+                        The line chart shows how the cost compounds year after year.
+                    </p>
+
+                    <p>
+                        By Year 4, the total reaches almost $280,000 CAD — a number that feels even heavier when translated into rupees.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection text-center">
             <h3>What this cost really represents</h3>
 
             <p>
-                These figures are not merely financial. They hold distance from home, family sacrifice, repeated
-                semesters, exchange-rate anxiety, and the private pressure to make every dollar look justified.
+                These numbers are not just financial. They represent distance from home, family sacrifice,
+                repeated semesters, unstable exchange rates, and the emotional weight of making the investment worth it.
             </p>
 
             <p>
-                Being an international student means carrying two currencies at once: the Canadian dollar that pays the
-                invoice, and the emotional currency of hope, discipline, and consequence.
+                Being an international student means constantly balancing ambition with constraint.
+                The cost is paid in dollars, rupees, decisions, trade-offs, and time.
             </p>
         </section>
 
-        <footer>
-            Created by Anushka · Assignment #1: Storytelling via Data Visualization
+        <footer class="mt-5 text-center">
+            <p>Created by Anushka · Storytelling via Data Visualization</p>
         </footer>
 
-    </main>
+    </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
