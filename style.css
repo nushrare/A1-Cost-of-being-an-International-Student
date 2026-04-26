@@ -48,10 +48,17 @@ h3,
 }
 
 h1 {
-    font-size: clamp(64px, 9vw, 118px);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(76px, 11vw, 154px);
     font-weight: 700;
-    line-height: 0.86;
-    letter-spacing: -3px;
+    line-height: 0.78;
+    letter-spacing: -4px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+h1 span {
+    display: block;
 }
 
 h2 {
