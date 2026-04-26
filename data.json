@@ -1,65 +1,62 @@
 [
   {
-    "category": "Rent",
-    "amount": 950,
-    "icon": "🏠",
-    "color": "#2F2A28",
-    "type": "Essential"
+    "category": "Tuition & Fees",
+    "amount": 33000,
+    "icon": "🎓",
+    "color": "#2F2A28"
   },
   {
-    "category": "Groceries",
-    "amount": 320,
+    "category": "Rent / Housing",
+    "amount": 15600,
+    "icon": "🏠",
+    "color": "#6B4F43"
+  },
+  {
+    "category": "Food & Groceries",
+    "amount": 7800,
     "icon": "🛒",
-    "color": "#C9AE9F",
-    "type": "Essential"
+    "color": "#A47551"
+  },
+  {
+    "category": "Travel Home",
+    "amount": 6375,
+    "icon": "✈️",
+    "color": "#B48E72"
+  },
+  {
+    "category": "Clothing & Personal Care",
+    "amount": 2400,
+    "icon": "🧴",
+    "color": "#C9AE9F"
   },
   {
     "category": "Transit",
-    "amount": 156,
+    "amount": 1800,
     "icon": "🚇",
-    "color": "#B48E72",
-    "type": "Essential"
+    "color": "#D8BFAE"
   },
   {
-    "category": "Phone Plan",
-    "amount": 45,
+    "category": "Entertainment & Social Life",
+    "amount": 1800,
+    "icon": "🎭",
+    "color": "#E8CFC1"
+  },
+  {
+    "category": "Phone & Internet",
+    "amount": 840,
     "icon": "📱",
-    "color": "#D8BFAE",
-    "type": "Essential"
+    "color": "#FFBD59"
   },
   {
-    "category": "School + Software",
-    "amount": 120,
+    "category": "Study Materials / Tech",
+    "amount": 125,
     "icon": "💻",
-    "color": "#8C6A5D",
-    "type": "Academic"
+    "color": "#8C6A5D"
   },
   {
-    "category": "Personal Care",
-    "amount": 150,
-    "icon": "🧴",
-    "color": "#E8CFC1",
-    "type": "Personal"
-  },
-  {
-    "category": "Eating Out",
-    "amount": 180,
-    "icon": "🍽️",
-    "color": "#FFBD59",
-    "type": "Lifestyle"
-  },
-  {
-    "category": "Emergency / Savings",
-    "amount": 100,
-    "icon": "💰",
-    "color": "#6B4F43",
-    "type": "Safety"
-  },
-  {
-    "category": "Tuition Pressure",
-    "amount": 600,
-    "icon": "🎓",
-    "color": "#A47551",
-    "type": "Academic"
+    "category": "Health Insurance",
+    "amount": 0,
+    "icon": "🏥",
+    "color": "#DED2C8"
   }
 ]
