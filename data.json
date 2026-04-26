@@ -1,62 +1,12 @@
 [
-  {
-    "category": "Tuition & Fees",
-    "amount": 33000,
-    "icon": "🎓",
-    "color": "#2F2A28"
-  },
-  {
-    "category": "Rent / Housing",
-    "amount": 15600,
-    "icon": "🏠",
-    "color": "#6B4F43"
-  },
-  {
-    "category": "Food & Groceries",
-    "amount": 7800,
-    "icon": "🛒",
-    "color": "#A47551"
-  },
-  {
-    "category": "Travel Home",
-    "amount": 6375,
-    "icon": "✈️",
-    "color": "#B48E72"
-  },
-  {
-    "category": "Clothing & Personal Care",
-    "amount": 2400,
-    "icon": "🧴",
-    "color": "#C9AE9F"
-  },
-  {
-    "category": "Transit",
-    "amount": 1800,
-    "icon": "🚇",
-    "color": "#D8BFAE"
-  },
-  {
-    "category": "Entertainment & Social Life",
-    "amount": 1800,
-    "icon": "🎭",
-    "color": "#E8CFC1"
-  },
-  {
-    "category": "Phone & Internet",
-    "amount": 840,
-    "icon": "📱",
-    "color": "#FFBD59"
-  },
-  {
-    "category": "Study Materials / Tech",
-    "amount": 125,
-    "icon": "💻",
-    "color": "#8C6A5D"
-  },
-  {
-    "category": "Health Insurance",
-    "amount": 0,
-    "icon": "🏥",
-    "color": "#DED2C8"
-  }
+  { "category": "Tuition & Fees", "amount": 33000, "icon": "🎓", "color": "#C6A15B" },
+  { "category": "Rent / Housing", "amount": 15600, "icon": "🏠", "color": "#0F2F24" },
+  { "category": "Food & Groceries", "amount": 7800, "icon": "🛒", "color": "#2F6B4F" },
+  { "category": "Travel Home", "amount": 6375, "icon": "✈️", "color": "#8A6A2F" },
+  { "category": "Clothing & Personal Care", "amount": 2400, "icon": "🧴", "color": "#D7C28A" },
+  { "category": "Transit", "amount": 1800, "icon": "🚇", "color": "#1C1C1C" },
+  { "category": "Entertainment & Social Life", "amount": 1800, "icon": "🎭", "color": "#446B52" },
+  { "category": "Phone & Internet", "amount": 840, "icon": "📱", "color": "#B9974F" },
+  { "category": "Study Materials / Tech", "amount": 125, "icon": "💻", "color": "#E8D8A8" },
+  { "category": "Health Insurance", "amount": 0, "icon": "🏥", "color": "#EFE8D8" }
 ]
