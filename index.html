@@ -14,37 +14,30 @@
 
 <body>
 
-    <main class="page-shell">
+    <div class="container my-5">
 
-        <section class="hero">
+        <section class="hero text-center">
             <p class="eyebrow">Data Story · International Student Life</p>
-
-            <h1>
-                Nearly<br>
-                <span>$280,000</span><br>
-                to Stay
-            </h1>
-
+            <h1>Nearly $280,000 to Stay</h1>
             <h2>The cost of being an international student in Toronto</h2>
 
             <p class="intro">
                 I came to Toronto from India for education, independence, and possibility.
-                Over four years, the price of staying became more than tuition and rent:
-                it became a story of currency conversion, monthly survival, and the quiet pressure
-                of building a future far from home.
+                But over four years, the price of staying became more than tuition and rent.
+                It became a story of currency conversion, monthly survival, and the quiet pressure of building a future far from home.
             </p>
         </section>
 
-        <section class="shock-section">
+        <section class="shock-section text-center my-5">
             <p class="shock-label">Estimated total cost over 4 years</p>
-            <h2 class="shock-number">$278,960 CAD</h2>
+            <h1 class="shock-number">$278,960 CAD</h1>
             <p class="shock-subtext">
                 Converted to Indian rupees, that becomes <strong id="croreValue">≈ ₹1.92 crore</strong>.
             </p>
             <p class="exchange-note" id="exchangeRate">1 CAD ≈ ₹68.77</p>
         </section>
 
-        <section class="summary-grid">
+        <section class="summary-grid my-5">
             <div class="summary-card">
                 <span>Total in CAD</span>
                 <strong>$278,960</strong>
@@ -52,7 +45,7 @@
 
             <div class="summary-card inr-card">
                 <span>Total in INR</span>
-                <strong id="totalInr">₹1,91,87,000</strong>
+                <strong id="totalInr">₹0</strong>
                 <small>home-currency shock</small>
             </div>
 
@@ -62,77 +55,79 @@
             </div>
         </section>
 
-        <section class="story-card">
-            <div class="story-copy">
-                <p class="section-label">Chart 1</p>
-                <h3>Tuition is the first financial wall.</h3>
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 1</p>
+                    <h3>Tuition is the first financial wall.</h3>
 
-                <p>
-                    My yearly tuition and fees are estimated at $33,000 CAD.
-                    That single category takes up the largest portion of my annual cost.
-                </p>
+                    <p>
+                        My yearly tuition and fees are estimated at $33,000 CAD.
+                        That single category takes up the largest portion of the annual cost.
+                    </p>
 
-                <p>
-                    For international students, tuition is not a background expense.
-                    It is the price of permission: the cost of remaining enrolled,
-                    remaining eligible, and remaining here.
-                </p>
-            </div>
+                    <p>
+                        For international students, tuition is not a background expense.
+                        It is the price of permission: the cost of remaining enrolled, remaining eligible, and remaining here.
+                    </p>
+                </div>
 
-            <div class="chart-wrap">
-                <canvas id="expenseDonutChart"></canvas>
-            </div>
-        </section>
-
-        <section class="story-card">
-            <div class="story-copy">
-                <p class="section-label">Chart 2</p>
-                <h3>The smaller costs become heavy through repetition.</h3>
-
-                <p>
-                    Rent, groceries, transit, phone bills, personal care, and flights home
-                    may look separate. But they arrive every month, every semester, every year.
-                </p>
-
-                <p>
-                    This chart turns those recurring costs into a ranked visual receipt
-                    of one year in Toronto.
-                </p>
-            </div>
-
-            <div class="chart-wrap">
-                <canvas id="expenseBarChart"></canvas>
+                <div class="col-lg-7">
+                    <canvas id="expenseDonutChart"></canvas>
+                </div>
             </div>
         </section>
 
-        <section class="story-card">
-            <div class="story-copy">
-                <p class="section-label">Chart 3</p>
-                <h3>Four years turns pressure into a massive total.</h3>
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 2</p>
+                    <h3>The smaller costs become heavy through repetition.</h3>
 
-                <p>
-                    One year is already expensive. Four years changes the scale completely.
-                    The line chart shows how the cost accumulates year after year.
-                </p>
+                    <p>
+                        Rent, groceries, transit, phone bills, personal care, and flights home may look separate.
+                        But they do not arrive separately in real life. They arrive every month, every semester, every year.
+                    </p>
 
-                <p>
-                    By Year 4, the total reaches almost $280,000 CAD — a number that feels
-                    even heavier when translated into rupees.
-                </p>
-            </div>
+                    <p>
+                        This chart turns those recurring costs into a ranked visual receipt of one year in Toronto.
+                    </p>
+                </div>
 
-            <div class="chart-wrap">
-                <canvas id="timelineChart"></canvas>
+                <div class="col-lg-7">
+                    <canvas id="expenseBarChart"></canvas>
+                </div>
             </div>
         </section>
 
-        <section class="reflection">
+        <section class="story-card timeline-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 3</p>
+                    <h3>Four years turns pressure into a massive total.</h3>
+
+                    <p>
+                        One year is already expensive. Four years changes the scale completely.
+                        The line chart shows how the cost compounds year after year.
+                    </p>
+
+                    <p>
+                        By Year 4, the total reaches almost $280,000 CAD — a number that feels even heavier when translated into rupees.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection text-center">
             <h3>What this cost really represents</h3>
 
             <p>
-                These numbers are not just financial. They represent distance from home,
-                family sacrifice, repeated semesters, unstable exchange rates, and the emotional
-                weight of making the investment worth it.
+                These numbers are not just financial. They represent distance from home, family sacrifice,
+                repeated semesters, unstable exchange rates, and the emotional weight of making the investment worth it.
             </p>
 
             <p>
@@ -141,11 +136,11 @@
             </p>
         </section>
 
-        <footer>
+        <footer class="mt-5 text-center">
             <p>Created by Anushka · Storytelling via Data Visualization</p>
         </footer>
 
-    </main>
+    </div>
 
     <script src="script.js"></script>
 
