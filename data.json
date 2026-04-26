@@ -1,10 +1,65 @@
 [
-  { "category": "Rent", "amount": 950, "icon": "🏠", "color": "#C9AE9F" },
-  { "category": "Groceries", "amount": 320, "icon": "🛒", "color": "#FFBD59" },
-  { "category": "Transit", "amount": 156, "icon": "🚇", "color": "#B48E72" },
-  { "category": "Phone Bill", "amount": 45, "icon": "📱", "color": "#D9C3B0" },
-  { "category": "School Supplies", "amount": 120, "icon": "💻", "color": "#8C6A5D" },
-  { "category": "Personal Care", "amount": 150, "icon": "🧴", "color": "#E8CFC1" },
-  { "category": "Eating Out", "amount": 180, "icon": "🍽️", "color": "#A47551" },
-  { "category": "Emergency / Savings", "amount": 100, "icon": "💰", "color": "#6B4F43" }
+  {
+    "category": "Rent",
+    "amount": 950,
+    "icon": "🏠",
+    "color": "#2F2A28",
+    "type": "Essential"
+  },
+  {
+    "category": "Groceries",
+    "amount": 320,
+    "icon": "🛒",
+    "color": "#C9AE9F",
+    "type": "Essential"
+  },
+  {
+    "category": "Transit",
+    "amount": 156,
+    "icon": "🚇",
+    "color": "#B48E72",
+    "type": "Essential"
+  },
+  {
+    "category": "Phone Plan",
+    "amount": 45,
+    "icon": "📱",
+    "color": "#D8BFAE",
+    "type": "Essential"
+  },
+  {
+    "category": "School + Software",
+    "amount": 120,
+    "icon": "💻",
+    "color": "#8C6A5D",
+    "type": "Academic"
+  },
+  {
+    "category": "Personal Care",
+    "amount": 150,
+    "icon": "🧴",
+    "color": "#E8CFC1",
+    "type": "Personal"
+  },
+  {
+    "category": "Eating Out",
+    "amount": 180,
+    "icon": "🍽️",
+    "color": "#FFBD59",
+    "type": "Lifestyle"
+  },
+  {
+    "category": "Emergency / Savings",
+    "amount": 100,
+    "icon": "💰",
+    "color": "#6B4F43",
+    "type": "Safety"
+  },
+  {
+    "category": "Tuition Pressure",
+    "amount": 600,
+    "icon": "🎓",
+    "color": "#A47551",
+    "type": "Academic"
+  }
 ]
