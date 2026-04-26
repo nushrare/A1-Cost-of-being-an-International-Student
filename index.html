@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Cost of Staying</title>
+    <title>Nearly $280,000 to Stay</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link href="style.css" rel="stylesheet">
@@ -16,28 +19,41 @@
 
     <div class="container my-5">
 
-        <section class="hero">
-            <p class="eyebrow">Data Storytelling · International Student Life</p>
-            <h1>The Cost of Staying</h1>
-            <h2>My monthly reality as an international student in Toronto</h2>
+        <!-- HERO -->
+        <section class="hero text-center">
+            <p class="eyebrow">Data Story · International Student Life</p>
+
+            <h1>Nearly $280,000 to Stay</h1>
+
+            <h2>The cost of being an international student in Toronto</h2>
 
             <p class="intro">
-                Toronto offered me education, independence, and possibility. But behind that dream is a quieter,
-                more relentless story: rent, groceries, transit, tuition pressure, and the constant mental arithmetic
-                of living away from home.
+                I came to Toronto for education, independence, and possibility.
+                What I did not fully understand at the time was the cost of staying.
+                Over four years, that cost has quietly accumulated into something far larger than expected.
             </p>
         </section>
 
+        <!-- SHOCK NUMBER -->
+        <section class="shock-section text-center my-5">
+            <p class="shock-label">Estimated total cost over 4 years</p>
+            <h1 class="shock-number">$278,960</h1>
+            <p class="shock-subtext">
+                That is what it has taken to study, live, and build a life here.
+            </p>
+        </section>
+
+        <!-- SUMMARY -->
         <section class="summary-grid my-5">
             <div class="summary-card">
-                <span>Total Monthly Cost</span>
-                <strong id="totalCost">$0</strong>
+                <span>Annual Cost</span>
+                <strong>$69,740</strong>
             </div>
 
             <div class="summary-card">
-                <span>Largest Expense</span>
-                <strong id="largestCost">Loading</strong>
-                <small id="largestAmount">$0</small>
+                <span>Biggest Expense</span>
+                <strong>Tuition</strong>
+                <small>$33,000 / year</small>
             </div>
 
             <div class="summary-card">
@@ -46,19 +62,23 @@
             </div>
         </section>
 
+        <!-- CHART 1 -->
         <section class="story-card mb-5">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <p class="section-label">Chart 1</p>
-                    <h3>Before anything else, rent takes the room.</h3>
+                    <h3>Tuition alone takes nearly half.</h3>
+
                     <p>
-                        My monthly budget begins with housing. Rent is not simply one category among many;
-                        it is the foundation that determines how much freedom is left for food, movement,
-                        self-care, school, and savings.
+                        The largest cost is not rent. It is tuition.
+                        Each year, tens of thousands of dollars are paid upfront
+                        just to remain enrolled.
                     </p>
+
                     <p>
-                        The doughnut chart shows how quickly one fixed cost can dominate the financial life
-                        of an international student.
+                        This chart shows how each category contributes to the
+                        total yearly cost, and how quickly one decision —
+                        to study abroad — becomes a long-term financial commitment.
                     </p>
                 </div>
 
@@ -68,19 +88,22 @@
             </div>
         </section>
 
+        <!-- CHART 2 -->
         <section class="story-card mb-5">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <p class="section-label">Chart 2</p>
-                    <h3>Some costs are flexible. Others are not.</h3>
+                    <h3>Living costs don't look big — until they stack.</h3>
+
                     <p>
-                        The horizontal bar chart makes the pressure easier to read. Housing and tuition-related
-                        costs sit at the top, while smaller categories such as phone bills or personal care still
-                        matter because they accumulate quietly.
+                        Rent, food, and transportation may seem manageable
+                        on their own. But together, they create a second layer
+                        of pressure that runs parallel to tuition.
                     </p>
+
                     <p>
-                        This is where the story becomes personal: every smaller expense asks whether comfort,
-                        dignity, or convenience can be postponed.
+                        The accumulation is what defines the experience.
+                        Small costs repeat every month, quietly shaping daily life.
                     </p>
                 </div>
 
@@ -90,22 +113,31 @@
             </div>
         </section>
 
-        <section class="reflection">
-            <h3>What the data reveals</h3>
+        <!-- REFLECTION -->
+        <section class="reflection text-center">
+            <h3>What this cost really represents</h3>
+
             <p>
-                The cost of being an international student in Toronto is not only financial. It is emotional,
-                social, and deeply personal. Each expense represents a decision about what to prioritize,
-                what to delay, and what it takes to keep building a future away from home.
+                These numbers are not just financial. They represent distance from home,
+                pressure to succeed, and the weight of investment placed on the future.
+            </p>
+
+            <p>
+                Being an international student means constantly balancing ambition
+                with constraint. The cost is not only paid in dollars, but in decisions,
+                trade-offs, and time.
             </p>
         </section>
 
-        <footer>
-            <p>Created by Anushka · Assignment #1: Storytelling via Data Visualization</p>
+        <!-- FOOTER -->
+        <footer class="mt-5 text-center">
+            <p>Created by Anushka · Storytelling via Data Visualization</p>
         </footer>
 
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
