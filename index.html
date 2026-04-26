@@ -16,32 +16,92 @@
 
     <div class="container my-5">
 
-        <h1>The Cost of Staying</h1>
-        <h2>My monthly reality as an international student in Toronto</h2>
+        <section class="hero">
+            <p class="eyebrow">Data Storytelling · International Student Life</p>
+            <h1>The Cost of Staying</h1>
+            <h2>My monthly reality as an international student in Toronto</h2>
 
-        <p class="intro">
-            Toronto is a city of education, ambition, and opportunity. But for an international student,
-            it is also a city of rent, groceries, transit, phone bills, school supplies, and constant financial calculation.
-            This data story visualizes a sample month in my life.
-        </p>
+            <p class="intro">
+                Toronto offered me education, independence, and possibility. But behind that dream is a quieter,
+                more relentless story: rent, groceries, transit, tuition pressure, and the constant mental arithmetic
+                of living away from home.
+            </p>
+        </section>
 
-        <div class="row my-5">
-            <div class="col-md-6">
-                <h3>Where my money goes</h3>
-                <canvas id="myChart"></canvas>
+        <section class="summary-grid my-5">
+            <div class="summary-card">
+                <span>Total Monthly Cost</span>
+                <strong id="totalCost">$0</strong>
             </div>
 
-            <div class="col-md-6">
-                <h3>Monthly cost by category</h3>
-                <canvas id="barChart"></canvas>
+            <div class="summary-card">
+                <span>Largest Expense</span>
+                <strong id="largestCost">Loading</strong>
+                <small id="largestAmount">$0</small>
             </div>
-        </div>
 
-        <p class="conclusion">
-            The data shows that the cost of being an international student is not only financial.
-            It is emotional, social, and deeply personal. Every expense represents a decision about what to prioritize,
-            what to delay, and what it takes to keep building a future away from home.
-        </p>
+            <div class="summary-card">
+                <span>City</span>
+                <strong>Toronto</strong>
+            </div>
+        </section>
+
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 1</p>
+                    <h3>Before anything else, rent takes the room.</h3>
+                    <p>
+                        My monthly budget begins with housing. Rent is not simply one category among many;
+                        it is the foundation that determines how much freedom is left for food, movement,
+                        self-care, school, and savings.
+                    </p>
+                    <p>
+                        The doughnut chart shows how quickly one fixed cost can dominate the financial life
+                        of an international student.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <canvas id="expenseDonutChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-card mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="section-label">Chart 2</p>
+                    <h3>Some costs are flexible. Others are not.</h3>
+                    <p>
+                        The horizontal bar chart makes the pressure easier to read. Housing and tuition-related
+                        costs sit at the top, while smaller categories such as phone bills or personal care still
+                        matter because they accumulate quietly.
+                    </p>
+                    <p>
+                        This is where the story becomes personal: every smaller expense asks whether comfort,
+                        dignity, or convenience can be postponed.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <canvas id="expenseBarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection">
+            <h3>What the data reveals</h3>
+            <p>
+                The cost of being an international student in Toronto is not only financial. It is emotional,
+                social, and deeply personal. Each expense represents a decision about what to prioritize,
+                what to delay, and what it takes to keep building a future away from home.
+            </p>
+        </section>
+
+        <footer>
+            <p>Created by Anushka · Assignment #1: Storytelling via Data Visualization</p>
+        </footer>
 
     </div>
 
