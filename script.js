@@ -4,30 +4,50 @@ fetch("data.json")
     .then(response => response.json())
     .then(data => {
         expenses = data;
-        createPieChart();
+        createDonutChart();
         createBarChart();
+        createSummaryCards();
     });
 
-function createPieChart() {
-    const ctx = document.getElementById("myChart");
+function getTotal() {
+    return expenses.reduce((sum, item) => sum + item.amount, 0);
+}
+
+function createSummaryCards() {
+    const total = getTotal();
+    const highest = expenses.reduce((max, item) => item.amount > max.amount ? item : max);
+
+    document.getElementById("totalCost").innerText = "$" + total;
+    document.getElementById("largestCost").innerText = highest.category;
+    document.getElementById("largestAmount").innerText = "$" + highest.amount;
+}
+
+function createDonutChart() {
+    const ctx = document.getElementById("expenseDonutChart");
 
     new Chart(ctx, {
-        type: "pie",
+        type: "doughnut",
         data: {
             labels: expenses.map(item => item.category),
             datasets: [{
-                label: "Monthly Expenses",
                 data: expenses.map(item => item.amount),
                 backgroundColor: expenses.map(item => item.color),
-                borderWidth: 2,
-                borderColor: "#ffffff"
+                borderColor: "#fffaf7",
+                borderWidth: 3
             }]
         },
         options: {
+            cutout: "62%",
             plugins: {
-                title: {
-                    display: true,
-                    text: "Monthly Expense Breakdown"
+                legend: {
+                    position: "bottom"
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ": $" + context.raw + " CAD";
+                        }
+                    }
                 }
             }
         }
@@ -35,23 +55,41 @@ function createPieChart() {
 }
 
 function createBarChart() {
-    const ctx = document.getElementById("barChart");
+    const ctx = document.getElementById("expenseBarChart");
 
     new Chart(ctx, {
         type: "bar",
         data: {
-            labels: expenses.map(item => item.category),
+            labels: expenses.map(item => item.icon + " " + item.category),
             datasets: [{
-                label: "Cost in CAD",
+                label: "Monthly cost in CAD",
                 data: expenses.map(item => item.amount),
                 backgroundColor: expenses.map(item => item.color),
-                borderWidth: 1
+                borderRadius: 10
             }]
         },
         options: {
+            indexAxis: "y",
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return "$" + context.raw + " CAD";
+                        }
+                    }
+                }
+            },
             scales: {
-                y: {
-                    beginAtZero: true
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return "$" + value;
+                        }
+                    }
                 }
             }
         }
