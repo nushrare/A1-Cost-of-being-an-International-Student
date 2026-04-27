@@ -17,12 +17,17 @@
             --gold: #D6B25E;
             --white: #FFFFFF;
             --ivory: #F7F2E8;
+            --soft: #E7DDC9;
             --muted: #6D665A;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            background: linear-gradient(180deg, #ffffff 0%, var(--ivory) 100%);
+            background: var(--ivory);
             color: var(--black);
             font-family: 'Inter', sans-serif;
         }
@@ -33,7 +38,7 @@
         }
 
         .hero {
-            min-height: 82vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,7 +46,7 @@
             padding: 80px 0;
         }
 
-        .eyebrow, .label {
+        .eyebrow {
             text-transform: uppercase;
             letter-spacing: 4px;
             color: var(--gold);
@@ -54,7 +59,7 @@
         }
 
         h1 {
-            font-size: clamp(60px, 9vw, 126px);
+            font-size: clamp(62px, 9vw, 128px);
             line-height: 0.9;
             margin: 18px auto;
             max-width: 980px;
@@ -78,22 +83,26 @@
             color: #302d29;
         }
 
-        .shock, .reflection {
+        .shock {
             background: linear-gradient(135deg, var(--black), var(--green));
             color: var(--white);
             text-align: center;
-            padding: 72px 36px;
+            padding: 76px 36px;
             border-radius: 32px;
             border: 1px solid var(--gold);
-            box-shadow: 0 35px 90px rgba(0,0,0,0.22);
-            margin-bottom: 32px;
+            box-shadow: 0 35px 90px rgba(0,0,0,0.25);
+            margin-bottom: 28px;
         }
 
         .shock h2 {
-            font-size: clamp(54px, 8vw, 104px);
+            font-size: clamp(56px, 8vw, 108px);
             color: var(--gold);
             margin: 10px 0;
             line-height: 1;
+        }
+
+        .shock p {
+            font-size: 18px;
         }
 
         .metrics {
@@ -103,16 +112,13 @@
             margin: 28px 0 64px;
         }
 
-        .metric, .story, .table-card {
+        .metric {
             background: var(--white);
             border: 1px solid rgba(214,178,94,0.45);
-            border-radius: 28px;
-            box-shadow: 0 22px 65px rgba(0,0,0,0.08);
-        }
-
-        .metric {
-            padding: 32px 24px;
+            border-radius: 26px;
+            padding: 34px 24px;
             text-align: center;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.08);
         }
 
         .metric.dark {
@@ -121,7 +127,6 @@
         }
 
         .metric span {
-            display: block;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 12px;
@@ -130,7 +135,7 @@
         }
 
         .metric.dark span {
-            color: #E8DDC5;
+            color: var(--soft);
         }
 
         .metric strong {
@@ -140,34 +145,25 @@
             font-size: 46px;
         }
 
-        .filter-panel {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .filter-panel button {
-            border: 1px solid var(--gold);
-            background: white;
-            color: var(--black);
-            padding: 10px 16px;
-            border-radius: 999px;
-            margin: 6px;
-            cursor: pointer;
-            font-weight: 700;
-        }
-
-        .filter-panel button.active {
-            background: var(--green);
-            color: white;
-        }
-
         .story {
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
             gap: 44px;
             align-items: center;
+            background: var(--white);
+            border: 1px solid rgba(214,178,94,0.42);
+            border-radius: 32px;
             padding: 52px;
             margin-bottom: 52px;
+            box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+        }
+
+        .label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .story h3 {
@@ -188,39 +184,20 @@
         }
 
         .chart-box {
-            background: white;
+            background: #fff;
             border: 1px solid rgba(15,47,36,0.18);
             border-radius: 24px;
             padding: 24px;
         }
 
-        .table-card {
-            padding: 42px;
-            margin-bottom: 52px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 22px;
-        }
-
-        th, td {
-            padding: 16px;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-            text-align: left;
-        }
-
-        th {
-            cursor: pointer;
-            color: var(--green);
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        tr:hover {
-            background: #F7F2E8;
+        .reflection {
+            background: linear-gradient(135deg, var(--black), var(--green));
+            color: var(--white);
+            text-align: center;
+            border-radius: 32px;
+            padding: 68px 52px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 30px 85px rgba(0,0,0,0.25);
         }
 
         .reflection h3 {
@@ -242,12 +219,13 @@
         }
 
         @media (max-width: 900px) {
-            .metrics, .story {
+            .metrics,
+            .story {
                 grid-template-columns: 1fr;
             }
 
-            .story, .table-card {
-                padding: 28px;
+            .story {
+                padding: 32px;
             }
         }
     </style>
@@ -291,21 +269,15 @@
             </div>
         </section>
 
-        <section class="filter-panel">
-            <p class="label">Filter the story</p>
-            <button class="active" onclick="filterData('All', this)">All</button>
-            <button onclick="filterData('Academic', this)">Academic</button>
-            <button onclick="filterData('Living', this)">Living</button>
-            <button onclick="filterData('Personal', this)">Personal</button>
-            <button onclick="filterData('Travel', this)">Travel</button>
-        </section>
-
         <section class="story">
             <div>
                 <p class="label">Interactive Chart 1</p>
                 <h3>Tuition is not a fee. It is the gate.</h3>
-                <p>Hover over the chart to inspect each cost category and its yearly weight.</p>
-                <p class="hint">Interactive: hover + filter buttons above.</p>
+                <p>
+                    At approximately $33,000 CAD per year, tuition commands the largest share of the annual cost.
+                    It is the threshold that determines whether I remain enrolled, eligible, and present.
+                </p>
+                <p class="hint">Hover over the chart to inspect each cost category.</p>
             </div>
             <div class="chart-box">
                 <canvas id="donutChart"></canvas>
@@ -316,8 +288,11 @@
             <div>
                 <p class="label">Interactive Chart 2</p>
                 <h3>The smaller costs become heavy through repetition.</h3>
-                <p>Recurring costs assemble into a second financial architecture beneath tuition.</p>
-                <p class="hint">Interactive: hover over each bar.</p>
+                <p>
+                    Rent, groceries, transit, phone bills, personal care, and flights home appear ordinary in isolation.
+                    But recurrence gives them power.
+                </p>
+                <p class="hint">Hover over each bar to reveal the annual amount.</p>
             </div>
             <div class="chart-box">
                 <canvas id="barChart"></canvas>
@@ -328,30 +303,15 @@
             <div>
                 <p class="label">Interactive Chart 3</p>
                 <h3>Four years transforms pressure into a fortune.</h3>
-                <p>The cumulative line reveals how an annual cost matures into a family-scale investment.</p>
-                <p class="hint">Interactive: hover across the timeline.</p>
+                <p>
+                    One year is expensive. Four years becomes monumental. The cumulative line reveals how an annual cost
+                    matures into a family-scale investment.
+                </p>
+                <p class="hint">Hover across the timeline to see the accumulated cost by year.</p>
             </div>
             <div class="chart-box">
                 <canvas id="lineChart"></canvas>
             </div>
-        </section>
-
-        <section class="table-card">
-            <p class="label">Interactive Table</p>
-            <h3>Every category, preserved.</h3>
-            <p>Click the table headers to sort the data. No category is removed.</p>
-
-            <table id="costTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable('category')">Category</th>
-                        <th onclick="sortTable('group')">Group</th>
-                        <th onclick="sortTable('amount')">Annual Cost</th>
-                        <th onclick="sortTable('fourYear')">Four-Year Cost</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
         </section>
 
         <section class="reflection">
@@ -374,166 +334,124 @@
     </main>
 
     <script>
-        const fullData = [
-            { category: "Tuition & Fees", group: "Academic", amount: 33000, color: "#D6B25E" },
-            { category: "Rent / Housing", group: "Living", amount: 15600, color: "#0F2F24" },
-            { category: "Food & Groceries", group: "Living", amount: 7800, color: "#2F6B4F" },
-            { category: "Transit", group: "Living", amount: 1800, color: "#151512" },
-            { category: "Phone & Internet", group: "Living", amount: 840, color: "#B9974F" },
-            { category: "Entertainment & Social Life", group: "Personal", amount: 1800, color: "#446B52" },
-            { category: "Clothing & Personal Care", group: "Personal", amount: 2400, color: "#C6A15B" },
-            { category: "Travel Home", group: "Travel", amount: 6375, color: "#9B7A32" },
-            { category: "Study Materials / Tech", group: "Academic", amount: 125, color: "#E8D8A8" },
-            { category: "Health Insurance", group: "Academic", amount: 0, color: "#EFE8D8" }
+        const expenses = [
+            { category: "Tuition & Fees", amount: 33000, color: "#D6B25E" },
+            { category: "Rent / Housing", amount: 15600, color: "#0F2F24" },
+            { category: "Food & Groceries", amount: 7800, color: "#2F6B4F" },
+            { category: "Travel Home", amount: 6375, color: "#9B7A32" },
+            { category: "Clothing & Personal Care", amount: 2400, color: "#C6A15B" },
+            { category: "Transit", amount: 1800, color: "#151512" },
+            { category: "Entertainment & Social Life", amount: 1800, color: "#446B52" },
+            { category: "Phone & Internet", amount: 840, color: "#B9974F" },
+            { category: "Study Materials / Tech", amount: 125, color: "#E8D8A8" }
         ];
-
-        let currentData = [...fullData];
-        let sortDirection = 1;
 
         function money(value) {
             return "$" + value.toLocaleString() + " CAD";
         }
 
-        let donutChart, barChart, lineChart;
-
-        function createCharts() {
-            donutChart = new Chart(document.getElementById("donutChart"), {
-                type: "doughnut",
-                data: chartData(),
-                options: chartOptions("doughnut")
-            });
-
-            barChart = new Chart(document.getElementById("barChart"), {
-                type: "bar",
-                data: chartData(),
-                options: {
-                    indexAxis: "y",
-                    plugins: tooltipOptions(),
-                    scales: {
-                        x: { beginAtZero: true },
-                        y: { grid: { display: false } }
-                    }
-                }
-            });
-
-            lineChart = new Chart(document.getElementById("lineChart"), {
-                type: "line",
-                data: {
-                    labels: ["Year 1", "Year 2", "Year 3", "Year 4"],
-                    datasets: [{
-                        data: [69740, 139480, 209220, 278960],
-                        borderColor: "#0F2F24",
-                        backgroundColor: "rgba(15,47,36,0.12)",
-                        pointBackgroundColor: "#D6B25E",
-                        pointBorderColor: "#070707",
-                        pointRadius: 7,
-                        pointHoverRadius: 11,
-                        fill: true,
-                        tension: 0.35,
-                        borderWidth: 4
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: "#070707",
-                            titleColor: "#D6B25E",
-                            bodyColor: "#ffffff",
-                            callbacks: {
-                                label: ctx => "Accumulated: " + money(ctx.raw)
-                            }
+        new Chart(document.getElementById("donutChart"), {
+            type: "doughnut",
+            data: {
+                labels: expenses.map(e => e.category),
+                datasets: [{
+                    data: expenses.map(e => e.amount),
+                    backgroundColor: expenses.map(e => e.color),
+                    borderColor: "#ffffff",
+                    borderWidth: 3,
+                    hoverOffset: 18
+                }]
+            },
+            options: {
+                cutout: "62%",
+                plugins: {
+                    legend: { position: "bottom" },
+                    tooltip: {
+                        backgroundColor: "#070707",
+                        titleColor: "#D6B25E",
+                        bodyColor: "#ffffff",
+                        callbacks: {
+                            label: ctx => ctx.label + ": " + money(ctx.raw)
                         }
                     }
                 }
-            });
-        }
+            }
+        });
 
-        function chartData() {
-            return {
-                labels: currentData.map(item => item.category),
+        new Chart(document.getElementById("barChart"), {
+            type: "bar",
+            data: {
+                labels: expenses.map(e => e.category),
                 datasets: [{
-                    data: currentData.map(item => item.amount),
-                    backgroundColor: currentData.map(item => item.color),
-                    borderColor: "#ffffff",
-                    borderWidth: 3,
-                    hoverOffset: 18,
-                    borderRadius: 8
+                    data: expenses.map(e => e.amount),
+                    backgroundColor: expenses.map(e => e.color),
+                    borderRadius: 10,
+                    hoverBackgroundColor: "#D6B25E"
                 }]
-            };
-        }
-
-        function tooltipOptions() {
-            return {
-                legend: { position: "bottom" },
-                tooltip: {
-                    backgroundColor: "#070707",
-                    titleColor: "#D6B25E",
-                    bodyColor: "#ffffff",
-                    callbacks: {
-                        label: ctx => ctx.label + ": " + money(ctx.raw)
+            },
+            options: {
+                indexAxis: "y",
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: "#070707",
+                        titleColor: "#D6B25E",
+                        bodyColor: "#ffffff",
+                        callbacks: {
+                            label: ctx => money(ctx.raw) + " per year"
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => "$" + value.toLocaleString()
+                        }
                     }
                 }
-            };
-        }
+            }
+        });
 
-        function chartOptions() {
-            return {
-                cutout: "62%",
-                plugins: tooltipOptions()
-            };
-        }
-
-        function updateCharts() {
-            donutChart.data = chartData();
-            barChart.data = chartData();
-            donutChart.update();
-            barChart.update();
-            renderTable();
-        }
-
-        function filterData(group, button) {
-            document.querySelectorAll(".filter-panel button").forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-
-            currentData = group === "All" ? [...fullData] : fullData.filter(item => item.group === group);
-            updateCharts();
-        }
-
-        function renderTable() {
-            const tbody = document.querySelector("#costTable tbody");
-            tbody.innerHTML = "";
-
-            fullData.forEach(item => {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-                    <td>${item.category}</td>
-                    <td>${item.group}</td>
-                    <td>${money(item.amount)}</td>
-                    <td>${money(item.amount * 4)}</td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-
-        function sortTable(key) {
-            fullData.sort((a, b) => {
-                const valueA = key === "fourYear" ? a.amount * 4 : a[key];
-                const valueB = key === "fourYear" ? b.amount * 4 : b[key];
-
-                if (typeof valueA === "number") {
-                    return (valueA - valueB) * sortDirection;
+        new Chart(document.getElementById("lineChart"), {
+            type: "line",
+            data: {
+                labels: ["Year 1", "Year 2", "Year 3", "Year 4"],
+                datasets: [{
+                    data: [69740, 139480, 209220, 278960],
+                    borderColor: "#0F2F24",
+                    backgroundColor: "rgba(15,47,36,0.12)",
+                    pointBackgroundColor: "#D6B25E",
+                    pointBorderColor: "#070707",
+                    pointRadius: 7,
+                    pointHoverRadius: 11,
+                    fill: true,
+                    tension: 0.35,
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: "#070707",
+                        titleColor: "#D6B25E",
+                        bodyColor: "#ffffff",
+                        callbacks: {
+                            label: ctx => "Accumulated: " + money(ctx.raw)
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => "$" + value.toLocaleString()
+                        }
+                    }
                 }
-
-                return valueA.localeCompare(valueB) * sortDirection;
-            });
-
-            sortDirection *= -1;
-            renderTable();
-        }
-
-        createCharts();
-        renderTable();
+            }
+        });
     </script>
 
 </body>
